@@ -11,12 +11,12 @@
                 ref="pvText"
             >
                     <v-icon icon="mdi-grid"/>
-                    <Transition name="slide-fade">
+
                         <div v-if="isVisibleOne">
                             <p>Pomiarujemy instalacje </p>
                             <p>fotowoltaiczne</p>
                         </div>
-                    </Transition>
+
             </v-sheet>
             <br />
             <v-sheet
@@ -27,12 +27,12 @@
                 ref="pvText"
             >
                     <v-icon icon="mdi-file-chart-outline"/>
-                    <Transition name="slide-fade">
+                    <!-- <Transition name="slide-fade"> -->
                         <div  v-if="isVisibleOne">
                             <p>Dostarczamy raport o stanie</p> 
                             <p>technicznym instalacji PV</p>
                         </div>
-                    </Transition>
+                    <!-- </Transition> -->
             </v-sheet>
             <br>    
             <v-sheet
@@ -43,13 +43,13 @@
                 ref="pvText"
             >
                     <v-icon icon="mdi-lightbulb-on-10"/>
-                    <Transition name="slide-fade">
+                    <!-- <Transition name="slide-fade"> -->
                         <div  v-if="isVisibleOne">
                             <p>Sprawdzamy parametry</p> 
                             <p>produkowanego prądu przez</p>
                             <p>instalację PV</p>
                         </div>
-                    </Transition>
+                    <!-- </Transition> -->
             </v-sheet>
      </div>
 </template>

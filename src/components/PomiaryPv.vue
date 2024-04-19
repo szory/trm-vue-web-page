@@ -1,63 +1,57 @@
 <template>
-    <div style="background-size: cover; background-image: url('src/assets/pexels-gustavo-fring-4254159.jpg'); background-position: 70% 26%;">
-        <!-- <div style="position: relative; top:100px;margin-left: 100px;  width: 500px; height: 500px; color: rgb(0, 68, 255)"> -->
-        <div style="position: relative; top:100px;margin-left: 100px;  width: 800px; height: 500px; opacity: 0.6;">
-            <v-card
-            height="100"
-            variant="elevated"
-            :max-width=vCardSize
-            style="background-color: rgb(0, 68, 255);"
-            ref="pvText"
+    <div 
+        class="pomiaryContainer" 
+        style="background-size: cover; background-image: url('src/assets/pexels-gustavo-fring-4254159.jpg'); background-position: 70% 26%;">
+            <v-divider :thickness="80" class="border-opacity-0"></v-divider>
+            <v-sheet
+                class="mx-auto pa-6 bgColor"
+                elevation="0"
+                :max-width="vCardSize"
+                :class="fontStyleClass"
+                ref="pvText"
             >
-                <v-card-text :class="fontStyleClass">
+                    <v-icon icon="mdi-grid"/>
                     <Transition name="slide-fade">
-                        <div  v-if="isVisibleOne">
+                        <div v-if="isVisibleOne">
                             <p>Pomiarujemy instalacje </p>
-                            <br/> 
                             <p>fotowoltaiczne</p>
                         </div>
                     </Transition>
-                </v-card-text>
-            </v-card>
-            <br>    
-            <v-card
-            variant="elevated"
-            :max-width=vCardSize
-            style="background-color: rgb(0, 68, 255);"
-            height="100"
+            </v-sheet>
+            <br />
+            <v-sheet
+                class="mx-auto pa-6 bgColor"
+                elevation="0"
+                :max-width="vCardSize"
+                :class="fontStyleClass"
+                ref="pvText"
             >
-                <v-card-text :class="fontStyleClass">
+                    <v-icon icon="mdi-file-chart-outline"/>
                     <Transition name="slide-fade">
                         <div  v-if="isVisibleOne">
                             <p>Dostarczamy raport o stanie</p> 
-                            <br/>
                             <p>technicznym instalacji PV</p>
                         </div>
                     </Transition>
-                </v-card-text>
-            </v-card>
+            </v-sheet>
             <br>    
-            <v-card
-            variant="elevated"
-            :max-width=vCardSize
-            style="background-color: rgb(0, 68, 255);"
-            height="140"
+            <v-sheet
+                class="mx-auto pa-6 bgColor"
+                elevation="0"
+                :max-width="vCardSize"
+                :class="fontStyleClass"
+                ref="pvText"
             >
-                <v-card-text :class="fontStyleClass">
+                    <v-icon icon="mdi-lightbulb-on-10"/>
                     <Transition name="slide-fade">
                         <div  v-if="isVisibleOne">
                             <p>Sprawdzamy parametry</p> 
-                            <br/>
                             <p>produkowanego prądu przez</p>
-                            <br/>
                             <p>instalację PV</p>
                         </div>
                     </Transition>
-                </v-card-text>
-            </v-card>
-        
-        </div>
-    </div>
+            </v-sheet>
+     </div>
 </template>
 
 <script setup lang="ts">
@@ -72,8 +66,8 @@ const props = defineProps<{
 const { mobile,show } = toRefs(props)
 const pvText = ref(null);
 
-const fontStyleClass = computed(()=> mobile.value?"text-h7 fontColorMine fontSize":"text-h4 fontColorMine");
-const vCardSize = computed(() => mobile.value?220:544);
+const fontStyleClass = computed(()=> mobile.value?"text-h7 fontColorMine fontSize":"text-h5 fontColorMine");
+const vCardSize = computed(() => mobile.value?300:600);
 
 const isVisibleOne = useElementVisibility(pvText);
 
@@ -88,10 +82,10 @@ watch(isVisibleOne,()=>{
 </script>
 
 <style scoped>
-div {
-    height:100.1vh;
+div.pomiaryContainer {
+    height:100vh;
     width: 100vw;
-    padding-left: 5px;
+    padding-left: 7px;
 }
 .fontColorMine{
     color: white;
@@ -122,6 +116,10 @@ div {
 .slide-fade-leave-to {
   transform: translateX(80px);
   opacity: 0;
+}
+.bgColor{
+    background-color: rgba(0, 68, 255,0.6);
+    text-align: center;
 }
 
 </style>

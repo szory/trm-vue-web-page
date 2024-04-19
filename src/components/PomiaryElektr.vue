@@ -6,7 +6,7 @@
         "
         class="fullscreen"
     >
-        <div class="fullscreen" style="position: relative; top:100px; margin-left: 100px; width: 900px;">
+        <div class="fullscreen" style="position: relative; top:100px; width: 900px;" :style="vMarginLeft">
             <v-row dense>
                 <v-col :cols="vColSize">
                     <v-hover>
@@ -159,6 +159,7 @@ const fontStyleClass = computed(()=> mobile.value?"fontColorMine text-h7 fontSiz
 const vCardSize = computed(()=> mobile.value?125:250);
 const vColSize = computed(()=> mobile.value?2:4);
 const vFontSize = computed(()=> mobile.value?"text-h7":"text-h4");
+const vMarginLeft = computed(()=> mobile.value?"margin-left: 30px":"margin-left: 100px;");
 </script>
 
 <style scoped>

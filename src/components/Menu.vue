@@ -1,8 +1,11 @@
 <template>
 
-<v-app-bar
+    <v-app-bar
         color="primary"
         prominent
+        @wheel.prevent
+        @touchmove.prevent
+        @scroll.prevent 
     >
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer">
         </v-app-bar-nav-icon>

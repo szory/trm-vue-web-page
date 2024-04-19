@@ -103,7 +103,7 @@ const titlePomElektr = ref("Pomiary elektryczne")
 const titlePomPv = ref("Pomiary fotowoltaiki")
 const titleOurProj = ref("Nasze Projekty")
 const titleContact = ref("Kontakt")
-const titleOpinie = ref("Klienci o nas")
+const titleOpinie = ref("O nas")
 const titleSite = ref(titlePomElektr.value);
 
 const drawer = ref(false);

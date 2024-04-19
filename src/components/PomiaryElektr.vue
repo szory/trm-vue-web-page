@@ -8,35 +8,28 @@
     >
         <div class="fullscreen" style="position: relative; top:100px; margin-left: 100px; width: 900px;">
             <v-row dense>
-                <v-col :cols="4">
+                <v-col :cols="vColSize">
                     <v-hover>
                     <template v-slot:default="{ isHovering, props }">
                     <v-card
                     v-bind="props"
                     variant="text"
                     :max-width=vCardSize
-                    height="250"
+                    :height=vCardSize
+                    :width=vCardSize
                     :class ="isHovering ? 'iconsIsHover': 'icons'" 
                     >
-                    <!-- <v-card-text :class="fontStyleClass" style="color: #004b7c">
-                            <ul>Wykonujemy pomiary:
-                                <li>mieszkań,</li>
-                                <li>domów,</li>
-                                <li>zakładów produkcyjnych,</li>
-                                <li>punktów handlowych</li>
-                            </ul>
-                        </v-card-text> -->
                         <v-img
                         :width="550"
                         aspect-ratio="16/9"
-                        
                         src="src/assets/house.png"
                         >
                             <v-expand-transition>
                                 <div
                                 v-if="isHovering"
-                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal text-h2"
-                                style="height: 100%;"
+                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal pa-3"
+                                :class="vFontSize"
+                                style="height: 100%; text-align: center;"
                                 >
                                 pomiary domów
                                 </div>
@@ -46,23 +39,17 @@
                     </template>
                     </v-hover>
                 </v-col>
-                <v-col :cols="4">
+                <v-col :cols="vColSize">
                     <v-hover>
                     <template v-slot:default="{ isHovering, props }">
                     <v-card
                     v-bind="props"
                     variant="elevated"
                     :max-width=vCardSize
-                    height="250"
+                    :height=vCardSize
+                    :width=vCardSize
                     :class ="isHovering ? 'iconsIsHover': 'icons'" 
                     >
-                        <!-- <v-card-text :class="fontStyleClass" style="color: #004b7c">
-                            <p>Dostarczamy dokumentację po</p> 
-                            <br/>
-                            <p>pomiarach zgodną z wymogami</p> 
-                            <br/>
-                            <p>ubezpieczycieli</p>
-                        </v-card-text> -->
                         <v-img
                         :width="550"
                         aspect-ratio="16/9"
@@ -72,8 +59,9 @@
                             <v-expand-transition>
                                 <div
                                 v-if="isHovering"
-                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal text-h2"
-                                style="height: 100%;"
+                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal pa-3"
+                                :class="vFontSize"
+                                style="height: 100%;text-align: center;"
                                 >
                                 pomiary mieszkań
                                 </div>
@@ -86,85 +74,73 @@
             </v-row>
             <br />
             <v-row dense>
-            <v-col :cols="4">
-                <v-hover>
-                    <template v-slot:default="{ isHovering, props }">
+                <v-col :cols="vColSize">
+                    <v-hover>
+                        <template v-slot:default="{ isHovering, props }">
 
-                <v-card
-                variant="elevated"
-                :max-width=vCardSize
-                height="250"
-                :class ="isHovering ? 'iconsIsHover': 'icons'" 
-                v-bind="props"
-                >
-                    <!-- <v-card-text :class="fontStyleClass" style="color: #004b7c">
-                        <p>Dostarczamy dokumentację po</p> 
-                        <br/>
-                        <p>pomiarach zgodną z wymogami</p> 
-                        <br/>
-                        <p>ubezpieczycieli</p>
-                    </v-card-text> -->
-                    <v-img
-                    :width="550"
-                    aspect-ratio="16/9"
-                    
-                    src="src/assets/factory.png"
+                    <v-card
+                    variant="elevated"
+                    :max-width=vCardSize
+                    :height=vCardSize
+                    :width=vCardSize
+                    :class ="isHovering ? 'iconsIsHover': 'icons'" 
+                    v-bind="props"
                     >
-                        <v-expand-transition>
-                            <div
-                            v-if="isHovering"
-                            class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal text-h4"
-                            style="height: 100%;"
-                            >
-                            pomiary zakładów produkcyjnych
-                            </div>
-                        </v-expand-transition>
-                    </v-img>
+                        <v-img
+                        :width="550"
+                        aspect-ratio="16/9"
+                        
+                        src="src/assets/factory.png"
+                        >
+                            <v-expand-transition>
+                                <div
+                                v-if="isHovering"
+                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal pa-3"
+                                :class="vFontSize"
+                                style="height: 100%;text-align: center;"
+                                >
+                                pomiary zakładów produkcyjnych
+                                </div>
+                            </v-expand-transition>
+                        </v-img>
 
-                </v-card>
+                    </v-card>
+                        </template>
+                    </v-hover>
+                </v-col>
+                <v-col :cols="vColSize">
+                    <v-hover>
+                        <template v-slot:default="{ isHovering, props }">
+                    <v-card
+                    variant="elevated"
+                    :max-width=vCardSize
+                    :height=vCardSize
+                    :width=vCardSize
+                    :class ="isHovering ? 'iconsIsHover': 'icons'" 
+                    v-bind="props"
+                    >
+                        <v-img
+                        :width="550"
+                        aspect-ratio="16/9"
+                        
+                        src="src/assets/shop.png"
+                        >
+                            <v-expand-transition>
+                                <div
+                                v-if="isHovering"
+                                class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal pa-3"
+                                :class="vFontSize"
+                                style="height: 100%;text-align: center;"
+                                >
+                                pomiary punktów usługowych
+                                </div>
+                            </v-expand-transition>                
+                        </v-img>
+
+                    </v-card>
                     </template>
-                </v-hover>
-            </v-col>
-            <!-- <br /> -->
-            <v-col :cols="4">
-                <v-hover>
-                    <template v-slot:default="{ isHovering, props }">
-
-                <v-card
-                variant="elevated"
-                :max-width=vCardSize
-                height="250"
-                :class ="isHovering ? 'iconsIsHover': 'icons'" 
-                v-bind="props"
-                >
-                    <!-- <v-card-text :class="fontStyleClass" style="color: #004b7c">
-                        <p>Dostarczamy dokumentację po</p> 
-                        <br/>
-                        <p>pomiarach zgodną z wymogami</p> 
-                        <br/>
-                        <p>ubezpieczycieli</p>
-                    </v-card-text> -->
-                    <v-img
-                    :width="550"
-                    aspect-ratio="16/9"
-                    
-                    src="src/assets/shop.png"
-                    >
-                        <v-expand-transition>
-                            <div
-                            v-if="isHovering"
-                            class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal text-h3"
-                            style="height: 100%;"
-                            >
-                            pomiary punktów usługowych
-                            </div>
-                        </v-expand-transition>                
-                    </v-img>
-
-                </v-card>
-                </template>
-                </v-hover>
-            </v-col>
+                    </v-hover>
+                </v-col>
             </v-row>
         </div>
     </div>
@@ -180,7 +156,9 @@ const props = defineProps<{
 const { mobile } = toRefs(props)
 
 const fontStyleClass = computed(()=> mobile.value?"fontColorMine text-h7 fontSize":"fontColorMine text-h4");
-const vCardSize = computed(()=> mobile.value?239:250);
+const vCardSize = computed(()=> mobile.value?125:250);
+const vColSize = computed(()=> mobile.value?2:4);
+const vFontSize = computed(()=> mobile.value?"text-h7":"text-h4");
 </script>
 
 <style scoped>

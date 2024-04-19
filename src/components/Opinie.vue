@@ -1,16 +1,65 @@
 <template>
-<div class="opinionContainer" style="
+<div class="opinionContainer" 
+  style="
     background-size: cover; 
     background-image: url('src/assets/pexels-anna-shvets-5711932.jpg');
     background-position: 70% 46%;
+    overflow-x: hidden;
+    overflow-y: scroll;
     "
   >
-    <v-sheet
+  <v-divider :thickness="80" class="border-opacity-0"></v-divider>
+  <div class="pa-3">
+       <v-img
+        :aspect-ratio="1"
+        class="mx-auto bg-white"
+        src="src/assets/Oferteo-Najlepsi-2024.png"
+        width="200"
+        cover
+      ></v-img>
+  </div>
+
+  <v-sheet
+      class="mx-auto pa-6"
+      elevation="0"
+      max-width="1200"
+      style="color:white; background-color: rgb(0, 0, 0); background-color: rgba(55, 55, 55, 0.6);"
+   >
+      <p>Działamy na polskim rynku od 1992. Specjalizujemy się w instalacjach kablowych oraz pomiarach elektrycznych.</p>
+      <br>
+      <p>Zakres naszej działalności to:</p>
+      
+      <ul style="list-style-type:disc; margin-left: 20px;">
+      <li> pomiary elektryczne (również instalacje PV)</li>
+        <br>
+        oraz instalacje:
+ 
+        <li>alarmowe,</li>
+        <li>teleinformatyczne,</li>
+        <li>videodomofonowe,</li>
+        <li>inteligentne budynki.</li>
+      </ul>
+      <br>
+      <p>Obsługujemy podmioty gospodarcze oraz klientów indywidualnych.</p><br>
+
+      <p>Tele Radio Mechanika to firma z wieloletnim doświadczeniem w zakresie projektowania jak i wykonawstwa instalacji elektrycznych.</p><br>
+
+      <p>W rozmowie z klientem staramy się dowiedzieć wszystkiego o potrzebach, próbując delikatnie łączyć jego koncepcję z naszymi pomysłami.</p>
+
+  </v-sheet>
+    
+  <v-divider :thickness="40" class="border-opacity-0"></v-divider>
+    
+  <v-sheet
     class="mx-auto"
     elevation="0"
     max-width="1200"
-    style="position: relative; top:20%;margin-left: 100px;opacity: 1;"
+    style="color:white; background-color: rgb(0, 0, 0); background-color: rgba(55, 55, 55, 0.6);"
     >
+
+    <div style="text-align: center;" class="pt-3">klienci o nas</div>
+    <!-- style="margin-left: 100px;opacity: 1;" -->
+
     <v-slide-group
       v-model="model"
       class="pa-4"
@@ -40,43 +89,7 @@
       </v-slide-group-item>
     </v-slide-group>
   </v-sheet>
-
-  <br>
-
-  <!-- <v-card
-  width="300"
-  height="300"
-  >
-    <div style=
-    "
-      /* height:15vh;
-      width: 10vw; */
-      background-color: transparent;
-      background-size: cover; 
-      background-image: url('src/assets/Oferteo-Najlepsi-2024.png');
-      /* background-position: 70% 46%; */
-    "
-    ></div>
-  </v-card> -->
-
-  <div :class="fixedOferteoPosition">
-       <v-img
-        :aspect-ratio="1"
-        class="bg-white"
-        src="src/assets/Oferteo-Najlepsi-2024.png"
-        width="200"
-        cover
-      ></v-img>
-    </div>
-
-  <!-- <span style="
-  height:100px;
-  width: 100px;
-  background-size: cover; 
-  background-image: url('src/assets/Oferteo-Najlepsi-2024.png');
-  background-position: 70% 46%;
-  "
-  ></span> -->
+  <v-divider :thickness="40" class="border-opacity-0"></v-divider>
 </div>
 
 </template>
@@ -152,13 +165,17 @@ div.opinionContainer {
 
 .oferteoPosition {
   position: relative;
-  top: 20%;
+  top: 5%;
   left: 40%;
 }
 
 .oferteoPositionMobile {
   position: relative;
-  top: 20%;
+  top: 5%;
   left: 22%;
+}
+.stuff {
+  background-color: rgb(55, 55, 55);
+  background-color: rgba(55, 55, 55, 0.5);
 }
 </style>

@@ -80,8 +80,6 @@ const five = ref();
     </section>
     <section
         @wheel.prevent
-        @touchmove.prevent
-        @scroll.prevent 
         ref="five"
     >
         <Opinie :mobile=mobile></Opinie>

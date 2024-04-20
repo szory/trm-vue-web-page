@@ -120,8 +120,8 @@ const authors = [
 ]
 
 const opinions = [
-  'Polecam Pana Piotra, szybko, profesjonalnie z należytą starannością.',
-  'Pan Piotr to wspaniały fachowiec, punktulany, rzetelny, pracowity. Wspaniale wykonał zadanie, które zostało mu powierzone-pomiary elektryczne. Polecam serdecznie',
+'Polecam Pana Piotra, szybko, profesjonalnie z należytą starannością.',
+'Pan Piotr to wspaniały fachowiec, punktulany, rzetelny, pracowity. Wspaniale wykonał zadanie, które zostało mu powierzone-pomiary elektryczne. Polecam serdecznie',
 'Super kontakt, wszystko wykonane prawidłowo, polecam wszystkim!',
 'Fachowa profesjonalna usługa a przy tym niska cena. Takiej firmy szukałem. Polecam wszystkim.',
 'Jestem bardzo zadowolona ze współpracy, profesjonalne podejście do klienta. Pomoc na każdym etapie pracy szczególnie z załatwianiem papierów. Polecam, firma godna polecenia.',
@@ -138,8 +138,8 @@ const opinions = [
 'Szybko i sprawnie usunięto awarię związaną z brakiem prądu.',
 'Panowie bardzo sprawnie i profesjonalnie wykonali zlecone prace. Polecam !',
 'Sprawnie i konkretnie, dobra współpraca. Polecam.',
-'Firma godna polecenia w zakresie usług elektrycznych.'
-,'Bardzo szybko i sprawnie rozwiązali problem, pojawili się w przeciągu godziny od zgłoszenia. Polecam gorąco, szybko, rzetelnie i sprawnie.'
+'Firma godna polecenia w zakresie usług elektrycznych.',
+'Bardzo szybko i sprawnie rozwiązali problem, pojawili się w przeciągu godziny od zgłoszenia. Polecam gorąco, szybko, rzetelnie i sprawnie.'
 ]
 
 const model = ref(null);

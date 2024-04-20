@@ -118,7 +118,7 @@ div.pomiaryContainer {
   opacity: 0;
 }
 .bgColor{
-    background-color: rgba(0, 68, 255,0.6);
+    background-color: rgba(0, 68, 255,0.5);
     text-align: center;
 }
 

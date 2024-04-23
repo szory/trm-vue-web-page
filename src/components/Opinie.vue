@@ -57,7 +57,7 @@
     style="color:white; background-color: rgb(0, 0, 0); background-color: rgba(55, 55, 55, 0.6);"
     >
 
-    <div style="text-align: center;" class="pt-3">klienci o nas</div>
+    <div style="text-align: center;" class="pt-3 text-h4">klienci o nas</div>
     <!-- style="margin-left: 100px;opacity: 1;" -->
 
     <v-slide-group
